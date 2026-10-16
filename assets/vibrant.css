@@ -1,20 +1,23 @@
-/* Colour version 3: Northern Lights over Alberta.
-   Midnight indigo sky, aurora green and violet, soft lavender. */
+/* Colour version 3: ISCEBS wave.
+   Indigo, magenta and violet waveforms, a thin orange accent, soft lavender.
+   Inspired by the ISCEBS webcast artwork; the wave in assets/wave.svg is original. */
 :root{
-  --glacier:#2FBF8F;
-  --lake:#1D2452;
-  --canola:#7BE8C2;
-  --rose:#6C4BC4;
-  --glacier-deep:#13785A;
-  --spruce:#1A1F3D;
-  --snow:#F4F5FB;
-  --lavender:#E7E1F7;
+  --glacier:#9C2BAF;
+  --lake:#1C1450;
+  --canola:#F5A04A;
+  --rose:#C92691;
+  --glacier-deep:#4B2AAE;
+  --spruce:#1C1A3A;
+  --snow:#F6F4FB;
+  --lavender:#ECE5F9;
+  --violet:#5D2ED6;
+  --orange:#F38820;
   --navy:var(--spruce);
   --ink:var(--spruce);
   --ivory:var(--snow);
-  --muted:#474C68;
-  --line:#DCDDF0;
-  --sage:#E4E7F7;
+  --muted:#4A4766;
+  --line:#DEDAEF;
+  --sage:#E8E3F6;
 }
 body.vibrant{background:var(--snow);color:var(--spruce)}
 
@@ -26,7 +29,7 @@ body.vibrant{background:var(--snow);color:var(--spruce)}
 .vibrant nav>a[aria-current=page]:after{background:var(--rose);height:3px}
 .vibrant nav a:hover{color:var(--glacier)}
 .vibrant .button{background:var(--rose);border-color:var(--rose);color:#fff}
-.vibrant .button:hover{background:#563A9F;border-color:#563A9F;color:#fff}
+.vibrant .button:hover{background:#A71F78;border-color:#A71F78;color:#fff}
 
 /* Hero: the one big colour moment */
 .vibrant .hero-copy{background:var(--glacier-deep);color:#fff;position:relative}
@@ -142,18 +145,58 @@ body.vibrant{background:var(--snow);color:var(--spruce)}
 .vibrant .about-image:after{background:linear-gradient(90deg,rgba(29,36,82,.62),transparent)}
 .vibrant .board-member .eyebrow{color:var(--rose)}
 
-/* ---------- Version 3 specifics ---------- */
-/* Home hero: night sky with an aurora glow (the one signature moment) */
-.vibrant .hero-copy{background:
-  radial-gradient(120% 70% at 15% 0%,rgba(79,224,176,.38),transparent 60%),
-  radial-gradient(90% 60% at 95% 20%,rgba(140,105,230,.40),transparent 65%),
-  #1D2452}
-.vibrant .hero-copy p{color:#E6E9FA}
-/* Lighter in-between sections: soft lavender instead of the mint band */
+/* ---------- Version 3 specifics: ISCEBS wave ---------- */
+.vibrant header{border-bottom:4px solid var(--orange)}
+.vibrant nav>a[aria-current=page]:after{background:var(--rose)}
+.vibrant .button:hover{background:var(--violet);border-color:var(--violet)}
+
+/* Home hero: indigo with the magenta-to-violet waveform (the signature moment) */
+.vibrant .hero-copy{background:url(wave.svg) center bottom 20px/150% 150px no-repeat,#1C1450;padding-bottom:200px}
+.vibrant .hero-copy p{color:#ECEAFB}
+.vibrant .hero-note{position:relative}
+.vibrant .short-rule{background:var(--orange)}
+
+/* Three statements: indigo, magenta, violet */
+.vibrant .chapter-strip span:first-child{background:var(--lake)}
+.vibrant .chapter-strip span:nth-child(2){background:var(--rose);color:#fff}
+.vibrant .chapter-strip span:nth-child(3){background:var(--violet)}
+
+/* CEBS block: soft lavender with a magenta-to-violet card */
+.vibrant .credential-section{background:var(--lavender)}
+.vibrant .credential-section .prose{color:var(--muted)}
+.vibrant .credential-art{background:linear-gradient(135deg,#C92691 0%,#9C2BAF 45%,#5D2ED6 100%)}
+.vibrant .credential-art:after{border-color:rgba(255,255,255,.35)}
+.vibrant .credential-lines{color:#F6E9FF}
+.vibrant .credential-bottom{color:#fff}
+.vibrant .credential-section .text-link{border-color:var(--rose)}
+
+/* Lighter in-between sections */
 .vibrant .soft-section{background:var(--lavender)}
 .vibrant .soft-section .text-link{border-color:var(--rose)}
-/* Mint is bright enough to carry dark text; keep footer headings readable */
-.vibrant .footer-main h3{color:var(--canola)}
+.vibrant .soft-section .designation-tracks h3{color:var(--glacier-deep)}
+
+/* Panels */
+.vibrant .event-poster{background:url(wave.svg) center bottom 14px/170% 96px no-repeat,#1C1450;padding-bottom:130px}
+.vibrant .event-poster:after{display:none}
+.vibrant .event-poster h2 em{color:var(--canola)}
+.vibrant .tag{background:var(--orange);color:#1C1A3A}
+.vibrant .resource-feature{background:var(--lavender);border-top:6px solid var(--rose)}
+.vibrant .newsletter-cover{background:linear-gradient(135deg,#C92691,#5D2ED6)}
+
+/* Join band: violet with a quieter wave */
+.vibrant .join-band{background:url(wave.svg) right -40px center/52% 110% no-repeat,var(--violet)}
+.vibrant .join-band .button.light{color:var(--violet)}
+.vibrant .join-band .button.light:hover{background:var(--orange);border-color:var(--orange);color:#1C1A3A}
+
+/* Accents */
 .vibrant .text-link{border-color:var(--rose)}
 .vibrant .text-link:hover{color:var(--rose)}
 .vibrant .resource-item .eyebrow,.vibrant .board-member .eyebrow,.vibrant .member-reasons article>span,.vibrant .steps article>span,.vibrant .course-index,.vibrant .faq summary>span,.vibrant .margin-note{color:var(--rose)}
+.vibrant .steps article{border-top-color:var(--violet)}
+.vibrant .footer-main h3{color:var(--canola)}
+.vibrant .footer-bottom{border-color:#3A3170}
+
+@media(max-width:650px){
+  .vibrant .hero-copy{background-size:220% 110px;background-position:center bottom 12px;padding-bottom:140px}
+  .vibrant .join-band{background-size:180% 90px;background-position:center bottom;padding-bottom:110px}
+}

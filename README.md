@@ -1,7 +1,7 @@
-# Alberta Chapter of ISCEBS — website (colour version 3: Northern Lights)
+# Alberta Chapter of ISCEBS — website (colour version 3: ISCEBS wave)
 
 Alternate version of the chapter site with a brighter, Alberta-inspired palette
-(midnight indigo, aurora green and violet, soft lavender). Colours live in
+(ISCEBS indigo, magenta-to-violet waves, orange accent, soft lavender). Colours live in
 `assets/vibrant.css`, layered over the shared `assets/style.css`. Every page is
 marked `noindex` so it is not listed by search engines alongside abiscebs.com.
 
