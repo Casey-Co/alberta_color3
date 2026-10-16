@@ -1,7 +1,7 @@
-# Alberta Chapter of ISCEBS — website (colour version 3: CEBS colours)
+# Alberta Chapter of ISCEBS — website (colour version 3: CEBS colours, used with meaning)
 
 Alternate version of the chapter site with a brighter, Alberta-inspired palette
-(CEBS navy, teal, sky blue, orange and peach, borrowed from ifebp.org/cebs). Colours live in
+(teal = Group Benefits, orange = Retirement Plans, navy = CEBS; Source Serif 4 + Public Sans). Colours live in
 `assets/vibrant.css`, layered over the shared `assets/style.css`. Every page is
 marked `noindex` so it is not listed by search engines alongside abiscebs.com.
 
