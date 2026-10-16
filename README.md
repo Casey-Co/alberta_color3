@@ -1,7 +1,7 @@
-# Alberta Chapter of ISCEBS — website (colour version 3: ISCEBS wave)
+# Alberta Chapter of ISCEBS — website (colour version 3: CEBS colours)
 
 Alternate version of the chapter site with a brighter, Alberta-inspired palette
-(ISCEBS indigo, magenta-to-violet waves, orange accent, soft lavender). Colours live in
+(CEBS navy, teal, sky blue, orange and peach, borrowed from ifebp.org/cebs). Colours live in
 `assets/vibrant.css`, layered over the shared `assets/style.css`. Every page is
 marked `noindex` so it is not listed by search engines alongside abiscebs.com.
 

@@ -1,202 +1,139 @@
-/* Colour version 3: ISCEBS wave.
-   Indigo, magenta and violet waveforms, a thin orange accent, soft lavender.
-   Inspired by the ISCEBS webcast artwork; the wave in assets/wave.svg is original. */
+/* Colour version 3: CEBS colours.
+   Accents borrowed from the IFEBP CEBS program site (ifebp.org/cebs):
+   CEBS navy, banner teal, sky blue, program orange and soft peach.
+   Their green and purple are deliberately left out. */
 :root{
-  --glacier:#9C2BAF;
-  --lake:#1C1450;
-  --canola:#F5A04A;
-  --rose:#C92691;
-  --glacier-deep:#4B2AAE;
-  --spruce:#1C1A3A;
-  --snow:#F6F4FB;
-  --lavender:#ECE5F9;
-  --violet:#5D2ED6;
-  --orange:#F38820;
-  --navy:var(--spruce);
-  --ink:var(--spruce);
-  --ivory:var(--snow);
-  --muted:#4A4766;
-  --line:#DEDAEF;
-  --sage:#E8E3F6;
+  --cebs-navy:#00447C;
+  --teal:#1C6987;
+  --sky:#2A9DCB;
+  --orange:#E27508;
+  --orange-text:#A34E06;  /* orange dark enough for small text on light backgrounds */
+  --peach:#F9E4D1;
+  --pale-sky:#E3EFFB;
+  --ink-dark:#12263F;
+  --page:#F4F8FD;
+  --navy:var(--ink-dark);
+  --ink:var(--ink-dark);
+  --ivory:var(--page);
+  --muted:#3F5468;
+  --line:#D3E1EE;
+  --sage:var(--pale-sky);
 }
-body.vibrant{background:var(--snow);color:var(--spruce)}
-
+body.vibrant{background:var(--page);color:var(--ink-dark)}
 
 /* Top line + header */
-.vibrant .topline{background:var(--lake);color:#E6F6F7}
-.vibrant header{background:#fff;border-bottom:4px solid var(--glacier)}
-.vibrant .wordmark strong{color:var(--lake)}
-.vibrant nav>a[aria-current=page]:after{background:var(--rose);height:3px}
-.vibrant nav a:hover{color:var(--glacier)}
-.vibrant .button{background:var(--rose);border-color:var(--rose);color:#fff}
-.vibrant .button:hover{background:#A71F78;border-color:#A71F78;color:#fff}
+.vibrant .topline{background:var(--teal);color:#E8F2F7}
+.vibrant header{background:#fff;border-bottom:4px solid var(--sky)}
+.vibrant .wordmark strong{color:var(--cebs-navy)}
+.vibrant nav>a[aria-current=page]:after{background:var(--orange);height:3px}
+.vibrant nav a:hover{color:var(--teal)}
 
-/* Hero: the one big colour moment */
-.vibrant .hero-copy{background:var(--glacier-deep);color:#fff;position:relative}
+/* Buttons: CEBS orange with dark text (white on this orange is too faint to read) */
+.vibrant .button{background:var(--orange);border-color:var(--orange);color:var(--ink-dark);font-weight:650}
+.vibrant .button:hover{background:var(--cebs-navy);border-color:var(--cebs-navy);color:#fff}
+
+/* Home hero: CEBS navy */
+.vibrant .hero-copy{background:var(--cebs-navy);color:#fff;position:relative}
 .vibrant .hero h1{color:#fff}
-.vibrant .hero-copy p{color:#F0FBFC}
+.vibrant .hero-copy p{color:#E6EFF8}
 .vibrant .hero-note{color:#fff}
-.vibrant .short-rule{background:var(--canola);height:3px;width:36px}
+.vibrant .short-rule{background:var(--orange);height:3px;width:36px}
 
-/* Three statements, three colours */
-.vibrant .chapter-strip{padding-block:0;border-bottom:0;gap:0;color:#fff;font-size:15px;font-weight:550}
+/* Three statements: a nod to the CEBS site's coloured button bar */
+.vibrant .chapter-strip{padding-block:0;border-bottom:0;gap:0;color:#fff;font-size:15px;font-weight:600;width:100%;max-width:none}
 .vibrant .chapter-strip span{border:0;padding:22px 26px}
-.vibrant .chapter-strip span:first-child{padding-left:26px;background:var(--lake)}
-.vibrant .chapter-strip span:nth-child(2){background:var(--canola);color:var(--spruce)}
-.vibrant .chapter-strip span:nth-child(3){background:var(--rose)}
-.vibrant .chapter-strip{width:100%;max-width:none}
+.vibrant .chapter-strip span:first-child{padding-left:26px;background:var(--teal)}
+.vibrant .chapter-strip span:nth-child(2){background:var(--sky);color:var(--ink-dark)}
+.vibrant .chapter-strip span:nth-child(3){background:var(--orange);color:var(--ink-dark)}
 
-/* Vision */
-.vibrant .eyebrow{color:var(--lake)}
-.vibrant .vision-grid h2{color:var(--lake)}
-.vibrant .margin-note{color:var(--rose)}
+/* Text accents */
+.vibrant .eyebrow{color:var(--cebs-navy)}
+.vibrant .vision-grid h2,.vibrant .page-intro h1{color:var(--cebs-navy)}
+.vibrant .margin-note{color:var(--teal)}
 .vibrant .prose{color:var(--muted)}
+.vibrant .text-link{border-color:var(--orange)}
+.vibrant .text-link:hover{color:var(--orange-text)}
 
-/* CEBS: canola field */
-.vibrant .credential-section{background:var(--canola)}
-.vibrant .credential-section .eyebrow{color:var(--spruce)}
-.vibrant .credential-section .prose{color:#1A1F3D}
-.vibrant .credential-art{background:var(--lake)}
-.vibrant .credential-art:after{border-color:var(--glacier)}
-.vibrant .credential-lines{color:#C9F5E4}
-.vibrant .credential-bottom{color:var(--canola)}
-.vibrant .text-link{border-color:var(--rose)}
-.vibrant .text-link:hover{color:var(--rose)}
-.vibrant .credential-section .text-link{border-color:var(--spruce)}
-.vibrant .credential-section .text-link:hover{color:var(--lake)}
+/* CEBS block: peach, like the CEBS designation section */
+.vibrant .credential-section{background:var(--peach)}
+.vibrant .credential-section .eyebrow{color:var(--ink-dark)}
+.vibrant .credential-section h2{color:var(--cebs-navy)}
+.vibrant .credential-section .prose{color:#3B3A44}
+.vibrant .credential-art{background:var(--cebs-navy)}
+.vibrant .credential-art:after{border-color:var(--sky)}
+.vibrant .credential-lines{color:#CFE4F5}
+.vibrant .credential-bottom{color:var(--peach)}
 
-/* Events */
-.vibrant .event-feature{border-color:var(--glacier)}
-.vibrant .event-date{background:var(--glacier-deep);color:#fff}
-.vibrant .event-feature:hover .event-info h3{color:var(--rose)}
-.vibrant .round-arrow{border-color:var(--rose);color:var(--rose)}
+/* Home events teaser */
+.vibrant .event-feature{border-color:var(--sky)}
+.vibrant .event-date{background:var(--teal);color:#fff}
+.vibrant .event-feature:hover .event-info h3{color:var(--teal)}
+.vibrant .round-arrow{border-color:var(--orange);color:var(--orange-text)}
 
-/* Resources */
-.vibrant .resource-feature{background:var(--lavender);border-top:6px solid var(--glacier)}
+/* Resources teaser */
+.vibrant .resource-feature{background:var(--pale-sky);border-top:6px solid var(--sky)}
 
-/* Join band: wild rose */
-.vibrant .join-band{background:var(--rose)}
-.vibrant .join-inner .eyebrow{color:#E9E2FF}
-.vibrant .join-inner p{color:#F3EFFF}
-.vibrant .join-band .button.light{background:#fff;border-color:#fff;color:var(--rose)}
-.vibrant .join-band .button.light:hover{background:var(--canola);border-color:var(--canola);color:var(--spruce)}
+/* Join band: CEBS orange */
+.vibrant .join-band{background:var(--orange);color:var(--ink-dark)}
+.vibrant .join-inner h2{color:var(--ink-dark)}
+.vibrant .join-inner .eyebrow{color:var(--ink-dark)}
+.vibrant .join-inner p{color:#2A2A33}
+.vibrant .join-band .button.light{background:var(--cebs-navy);border-color:var(--cebs-navy);color:#fff}
+.vibrant .join-band .button.light:hover{background:#fff;border-color:#fff;color:var(--cebs-navy)}
 
-/* Footer */
-.vibrant footer{background:var(--lake);color:#E6F6F7}
+/* Footer: CEBS navy */
+.vibrant footer{background:var(--cebs-navy);color:#E6EFF8}
 .vibrant footer .wordmark strong{color:#fff}
-.vibrant .footer-main>div>a:not(.wordmark),.vibrant .footer-main>div>p:not(.footer-brand p){color:#CDEDEF}
-.vibrant .footer-main h3{color:var(--canola)}
-.vibrant .footer-bottom{border-color:#38427E;color:#BFE3E6}
+.vibrant .footer-main>div>a:not(.wordmark),.vibrant .footer-main>div>p:not(.footer-brand p){color:#D2E3F2}
+.vibrant .footer-main h3{color:var(--peach)}
+.vibrant .footer-bottom{border-color:#2B6396;color:#C4D9EC}
+
+/* ---------- Inner pages ---------- */
+.vibrant .event-poster .eyebrow,.vibrant .newsletter-cover .eyebrow,.vibrant .membership-statement .eyebrow,.vibrant .resource-banner .eyebrow{color:var(--peach)}
+
+/* Soft sections: peach */
+.vibrant .soft-section{background:var(--peach)}
+.vibrant .soft-section .eyebrow{color:var(--ink-dark)}
+.vibrant .soft-section h2{color:var(--cebs-navy)}
+.vibrant .soft-section p,.vibrant .soft-section .prose,.vibrant .soft-section .split>div>p,.vibrant .soft-section small,.vibrant .soft-section .resource-row small{color:#3B3A44}
+.vibrant .soft-section .resource-row,.vibrant .designation-tracks article,.vibrant .track-note{border-color:rgba(18,38,63,.3)}
+.vibrant .soft-section .designation-tracks h3{color:var(--cebs-navy)}
+.vibrant .soft-section .designation-tracks p,.vibrant .soft-section .track-note{color:#3B3A44}
+
+/* Membership */
+.vibrant .membership-statement{background:var(--teal)}
+.vibrant .membership-statement p{color:#E8F2F7}
+.vibrant .member-reasons article>span,.vibrant .steps article>span,.vibrant .course-index{color:var(--orange-text)}
+.vibrant .steps article{border-top:3px solid var(--sky)}
+.vibrant .faq summary>span{color:var(--orange-text)}
+.vibrant .faq details{border-color:#C6D7E6}
+
+/* CEBS page */
+.vibrant .course-list li>strong{color:var(--teal)}
+
+/* Events page */
+.vibrant .event-poster{background:var(--cebs-navy)}
+.vibrant .event-poster:after{border-color:rgba(255,255,255,.3)}
+.vibrant .event-poster h2 em{color:var(--orange)}
+.vibrant .poster-bottom span{color:#D6E5F2}
+.vibrant .tag{background:var(--peach);color:var(--ink-dark);font-weight:600}
+.vibrant .event-row .event-date{background:var(--teal);color:#fff}
+.vibrant .event-row{border-color:var(--sky)}
+.vibrant .past-event,.vibrant .past-year{border-color:#C6D7E6}
+
+/* Resources + newsletter */
+.vibrant .newsletter-cover{background:var(--teal)}
+.vibrant .newsletter-cover p{color:#E8F2F7}
+.vibrant .filters button{border-color:var(--sky)}
+.vibrant .filters button[aria-pressed=true]{background:var(--cebs-navy);border-color:var(--cebs-navy);color:#fff}
+.vibrant .resource-item .eyebrow{color:var(--teal)}
+.vibrant .resource-banner{background:var(--cebs-navy)}
+
+/* About */
+.vibrant .about-image:after{background:linear-gradient(90deg,rgba(0,68,124,.6),transparent)}
+.vibrant .board-member .eyebrow{color:var(--teal)}
 
 @media(max-width:650px){
   .vibrant .chapter-strip{grid-template-columns:1fr}
   .vibrant .chapter-strip span,.vibrant .chapter-strip span:first-child{padding:14px 20px}
-}
-
-/* ---------- Inner pages ---------- */
-/* Eyebrows sitting on dark panels stay light */
-.vibrant .event-poster .eyebrow,.vibrant .newsletter-cover .eyebrow,.vibrant .membership-statement .eyebrow,.vibrant .resource-banner .eyebrow{color:var(--canola)}
-
-/* Page intros */
-.vibrant .page-intro h1{color:var(--lake)}
-
-/* Soft sections become canola fields, like the CEBS block on Home */
-.vibrant .soft-section{background:var(--canola)}
-.vibrant .soft-section .eyebrow,.vibrant .soft-section h2{color:var(--spruce)}
-.vibrant .soft-section p,.vibrant .soft-section .prose,.vibrant .soft-section .split>div>p,.vibrant .soft-section small,.vibrant .soft-section .resource-row small{color:#1A1F3D}
-.vibrant .soft-section .text-link{border-color:var(--spruce);color:var(--spruce)}
-.vibrant .soft-section .text-link:hover{color:var(--lake)}
-.vibrant .soft-section .resource-row{border-color:rgba(26,31,61,.35)}
-.vibrant .designation-tracks article,.vibrant .track-note{border-color:rgba(26,31,61,.4)}
-.vibrant .soft-section .designation-tracks h3{color:var(--lake)}
-.vibrant .soft-section .designation-tracks p,.vibrant .soft-section .track-note{color:#1A1F3D}
-
-/* Membership */
-.vibrant .membership-statement{background:var(--glacier-deep)}
-.vibrant .membership-statement p{color:#F0FBFC}
-.vibrant .member-reasons article>span,.vibrant .steps article>span,.vibrant .course-index{color:var(--rose)}
-.vibrant .steps article{border-top:3px solid var(--glacier)}
-.vibrant .faq summary>span{color:var(--rose)}
-.vibrant .faq details{border-color:#D3D6EE}
-
-/* CEBS */
-.vibrant .course-list li>strong{color:var(--lake)}
-
-/* Events */
-.vibrant .event-poster{background:var(--glacier-deep)}
-.vibrant .event-poster:after{border-color:rgba(255,255,255,.35)}
-.vibrant .event-poster h2 em{color:var(--canola)}
-.vibrant .poster-bottom span{color:#E0F5F6}
-.vibrant .tag{background:var(--canola);color:var(--spruce);font-weight:600}
-.vibrant .event-row .event-date{background:var(--glacier-deep);color:#fff}
-.vibrant .event-row{border-color:var(--glacier)}
-.vibrant .past-event,.vibrant .past-year{border-color:#D3D6EE}
-
-/* Resources + newsletter */
-.vibrant .newsletter-cover{background:var(--rose)}
-.vibrant .newsletter-cover .eyebrow{color:#E9E2FF}
-.vibrant .newsletter-cover p{color:#F3EFFF}
-.vibrant .filters button{border-color:var(--glacier)}
-.vibrant .filters button[aria-pressed=true]{background:var(--lake);border-color:var(--lake)}
-.vibrant .resource-item .eyebrow{color:var(--rose)}
-.vibrant .resource-banner{background:var(--lake)}
-
-/* About */
-.vibrant .about-image:after{background:linear-gradient(90deg,rgba(29,36,82,.62),transparent)}
-.vibrant .board-member .eyebrow{color:var(--rose)}
-
-/* ---------- Version 3 specifics: ISCEBS wave ---------- */
-.vibrant header{border-bottom:4px solid var(--orange)}
-.vibrant nav>a[aria-current=page]:after{background:var(--rose)}
-.vibrant .button:hover{background:var(--violet);border-color:var(--violet)}
-
-/* Home hero: indigo with the magenta-to-violet waveform (the signature moment) */
-.vibrant .hero-copy{background:url(wave.svg) center bottom 20px/150% 150px no-repeat,#1C1450;padding-bottom:200px}
-.vibrant .hero-copy p{color:#ECEAFB}
-.vibrant .hero-note{position:relative}
-.vibrant .short-rule{background:var(--orange)}
-
-/* Three statements: indigo, magenta, violet */
-.vibrant .chapter-strip span:first-child{background:var(--lake)}
-.vibrant .chapter-strip span:nth-child(2){background:var(--rose);color:#fff}
-.vibrant .chapter-strip span:nth-child(3){background:var(--violet)}
-
-/* CEBS block: soft lavender with a magenta-to-violet card */
-.vibrant .credential-section{background:var(--lavender)}
-.vibrant .credential-section .prose{color:var(--muted)}
-.vibrant .credential-art{background:linear-gradient(135deg,#C92691 0%,#9C2BAF 45%,#5D2ED6 100%)}
-.vibrant .credential-art:after{border-color:rgba(255,255,255,.35)}
-.vibrant .credential-lines{color:#F6E9FF}
-.vibrant .credential-bottom{color:#fff}
-.vibrant .credential-section .text-link{border-color:var(--rose)}
-
-/* Lighter in-between sections */
-.vibrant .soft-section{background:var(--lavender)}
-.vibrant .soft-section .text-link{border-color:var(--rose)}
-.vibrant .soft-section .designation-tracks h3{color:var(--glacier-deep)}
-
-/* Panels */
-.vibrant .event-poster{background:url(wave.svg) center bottom 14px/170% 96px no-repeat,#1C1450;padding-bottom:130px}
-.vibrant .event-poster:after{display:none}
-.vibrant .event-poster h2 em{color:var(--canola)}
-.vibrant .tag{background:var(--orange);color:#1C1A3A}
-.vibrant .resource-feature{background:var(--lavender);border-top:6px solid var(--rose)}
-.vibrant .newsletter-cover{background:linear-gradient(135deg,#C92691,#5D2ED6)}
-
-/* Join band: violet with a quieter wave */
-.vibrant .join-band{background:url(wave.svg) right -40px center/52% 110% no-repeat,var(--violet)}
-.vibrant .join-band .button.light{color:var(--violet)}
-.vibrant .join-band .button.light:hover{background:var(--orange);border-color:var(--orange);color:#1C1A3A}
-
-/* Accents */
-.vibrant .text-link{border-color:var(--rose)}
-.vibrant .text-link:hover{color:var(--rose)}
-.vibrant .resource-item .eyebrow,.vibrant .board-member .eyebrow,.vibrant .member-reasons article>span,.vibrant .steps article>span,.vibrant .course-index,.vibrant .faq summary>span,.vibrant .margin-note{color:var(--rose)}
-.vibrant .steps article{border-top-color:var(--violet)}
-.vibrant .footer-main h3{color:var(--canola)}
-.vibrant .footer-bottom{border-color:#3A3170}
-
-@media(max-width:650px){
-  .vibrant .hero-copy{background-size:220% 110px;background-position:center bottom 12px;padding-bottom:140px}
-  .vibrant .join-band{background-size:180% 90px;background-position:center bottom;padding-bottom:110px}
 }
